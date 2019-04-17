@@ -1,0 +1,84 @@
+//CLASE	ESTUDIANTE
+
+
+package Herencia;
+
+public class Estudiante extends Persona {
+    
+    private int codigoEstudiante;
+    private float notaFinal;
+    
+    // Contructor
+    public Estudiante(String nombre, String apellido,int edad, int codigoEstudiante, float notaFinal ){
+      super(nombre,apellido,edad);
+      this.codigoEstudiante = codigoEstudiante;
+      this.notaFinal = notaFinal;
+           
+    }
+    
+    public void mostrarDatos(){
+        System.out.println("Nombre: "+getNombre()+
+                "\nApellido: "+getApellido()+
+                "\nEdad: "+getEdad()+
+                "\nCodigo Estudiante: "+codigoEstudiante+
+                "\nNota Final: "+notaFinal);
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------
+//CLASE PERSONA
+
+
+package Herencia;
+
+
+public class Persona {
+    
+    
+    private String nombre;
+    private String apellido;
+    private int edad;
+    
+    //contructor
+    public Persona(String nombre, String apellido, int edad)
+    {    
+       this.nombre = nombre;
+       this.apellido = apellido;
+       this.edad = edad;
+      
+     
+     //gets   
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+}
+
+------------------------------------------------------
+//CLASE PRINCIPAL
+
+
+package Herencia;
+
+
+public class Principal {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Estudiante estudiante = new Estudiante("Alejandro","Taboada",123,15,6f);
+        
+        estudiante.mostrarDatos();
+
+    }  
+}
